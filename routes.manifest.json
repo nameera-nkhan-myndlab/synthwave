@@ -1,0 +1,110 @@
+[
+  {
+    "method": "GET",
+    "path": "/api/health",
+    "auth_required": false,
+    "sample_params": {},
+    "sample_body": null,
+    "success_status": 200,
+    "response_shape": { "status": "string" }
+  },
+  {
+    "method": "GET",
+    "path": "/api/projects",
+    "auth_required": false,
+    "sample_params": {},
+    "sample_body": null,
+    "success_status": 200,
+    "response_shape": "array"
+  },
+  {
+    "method": "GET",
+    "path": "/api/projects/:id",
+    "auth_required": false,
+    "sample_params": { "id": 1 },
+    "sample_body": null,
+    "success_status": 200,
+    "response_shape": { "id": "int", "title": "string", "description": "string", "imageUrl": "string?", "repoUrl": "string?", "liveUrl": "string?", "featured": "boolean", "sortOrder": "int", "projectSkills": "array" }
+  },
+  {
+    "method": "POST",
+    "path": "/api/projects",
+    "auth_required": false,
+    "sample_params": {},
+    "sample_body": { "title": "Neon_GPT", "description": "Custom transformer model", "featured": true, "sortOrder": 1, "skillIds": [1, 2] },
+    "success_status": 201,
+    "response_shape": { "id": "int", "title": "string", "description": "string", "featured": "boolean", "sortOrder": "int" }
+  },
+  {
+    "method": "PUT",
+    "path": "/api/projects/:id",
+    "auth_required": false,
+    "sample_params": { "id": 1 },
+    "sample_body": { "title": "Updated Project", "description": "Updated desc" },
+    "success_status": 200,
+    "response_shape": { "id": "int", "title": "string", "description": "string", "featured": "boolean", "sortOrder": "int" }
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/projects/:id",
+    "auth_required": false,
+    "sample_params": { "id": 1 },
+    "sample_body": null,
+    "success_status": 204,
+    "response_shape": {}
+  },
+  {
+    "method": "GET",
+    "path": "/api/skills",
+    "auth_required": false,
+    "sample_params": {},
+    "sample_body": null,
+    "success_status": 200,
+    "response_shape": "array"
+  },
+  {
+    "method": "POST",
+    "path": "/api/skills",
+    "auth_required": false,
+    "sample_params": {},
+    "sample_body": { "name": "Python", "category": "language", "proficiency": 95 },
+    "success_status": 201,
+    "response_shape": { "id": "int", "name": "string", "category": "string", "proficiency": "int?" }
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/skills/:id",
+    "auth_required": false,
+    "sample_params": { "id": 1 },
+    "sample_body": null,
+    "success_status": 204,
+    "response_shape": {}
+  },
+  {
+    "method": "POST",
+    "path": "/api/contact",
+    "auth_required": false,
+    "sample_params": {},
+    "sample_body": { "name": "Nova Studios", "email": "recruiter@nova.sys", "message": "Contract: Generative Audio Models" },
+    "success_status": 201,
+    "response_shape": { "id": "int", "name": "string", "email": "string", "message": "string", "createdAt": "string" }
+  },
+  {
+    "method": "GET",
+    "path": "/api/contact",
+    "auth_required": false,
+    "sample_params": {},
+    "sample_body": null,
+    "success_status": 200,
+    "response_shape": "array"
+  },
+  {
+    "method": "POST",
+    "path": "/api/chat",
+    "auth_required": false,
+    "sample_params": {},
+    "sample_body": { "message": "Tell me about K. Flynn's projects", "history": [] },
+    "success_status": 201,
+    "response_shape": { "reply": "string" }
+  }
+]

@@ -1,0 +1,16 @@
+.content { padding: 2.5rem; max-width: 80rem; margin: 0 auto; display: flex; flex-direction: column; gap: 2.5rem; }
+.group {}
+.catLabel { font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 1.25rem; font-weight: 600; }
+.skillGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+@media (max-width: 1024px) { .skillGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .skillGrid { grid-template-columns: 1fr; } }
+.skillCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border); border-radius: var(--radius-card);
+  padding: 1.25rem; transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.skillCard:hover { border-color: var(--brand-border); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.skillName { color: var(--text-primary); font-size: 0.875rem; font-weight: 500; margin-bottom: 10px; }
+.bar { width: 100%; background: var(--bg-elevated); border-radius: var(--radius-pill); height: 6px; }
+.barFill { height: 6px; border-radius: var(--radius-pill); background: var(--accent); }

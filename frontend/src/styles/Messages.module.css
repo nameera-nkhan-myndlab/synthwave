@@ -1,0 +1,38 @@
+.content { padding: 2.5rem; max-width: 80rem; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+@media (max-width: 768px) { .content { grid-template-columns: 1fr; } }
+.formPanel, .listPanel {
+  background: var(--bg-card);
+  border: 1px solid var(--border); border-radius: var(--radius-card); padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.formTitle { font-size: 0.875rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.25rem; font-weight: 700; }
+.form { display: flex; flex-direction: column; gap: 16px; }
+.input, .textarea {
+  width: 100%; padding: 14px 20px;
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  border-radius: var(--radius-pill); color: var(--text-primary); font-family: 'DM Sans', sans-serif; font-size: 0.875rem;
+  outline: none; transition: border-color 0.2s;
+}
+.input:focus, .textarea:focus { border-color: var(--accent-border); box-shadow: 0 0 0 3px var(--accent-dim); }
+.textarea { resize: vertical; border-radius: 20px; }
+.submitBtn {
+  padding: 14px; background: var(--brand);
+  color: #fff; border: none; border-radius: var(--radius-pill);
+  font-weight: 600; cursor: pointer; text-transform: uppercase; letter-spacing: 0.1em;
+  font-size: 0.875rem; font-family: 'DM Sans', sans-serif;
+  transition: all 0.2s;
+  box-shadow: 0 2px 12px var(--brand-glow);
+}
+.submitBtn:hover { background: var(--brand-light); }
+.submitBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+.success { color: var(--brand); font-size: 0.8rem; margin-top: 6px; }
+.msgCard {
+  padding: 1.25rem; border: 1px solid var(--border); border-radius: 16px;
+  margin-bottom: 14px; transition: border-color 0.2s;
+}
+.msgCard:hover { border-color: var(--accent-border); }
+.msgTop { display: flex; justify-content: space-between; margin-bottom: 8px; }
+.msgName { color: var(--text-primary); font-weight: 500; font-size: 0.875rem; }
+.msgEmail { color: var(--text-muted); font-size: 0.75rem; }
+.msgBody { color: var(--text-secondary); font-size: 0.8125rem; margin-bottom: 8px; }
+.msgDate { color: var(--text-muted); font-size: 0.7rem; }

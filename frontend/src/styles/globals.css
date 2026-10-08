@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap');
+
+:root {
+  --brand: #3E4B3D;
+  --brand-light: #566954;
+  --brand-dim: rgba(62,75,61,0.08);
+  --brand-border: rgba(62,75,61,0.18);
+  --brand-glow: rgba(62,75,61,0.2);
+  --accent: #8B7347;
+  --accent-dim: rgba(139,115,71,0.1);
+  --accent-border: rgba(139,115,71,0.25);
+  --bg-dark: #EAE7DC;
+  --bg-card: #FFFFFF;
+  --bg-card-solid: #FFFFFF;
+  --bg-elevated: #F3F1EA;
+  --border: rgba(76,75,75,0.1);
+  --border-hover: rgba(62,75,61,0.35);
+  --text-primary: #3E4B3D;
+  --text-secondary: #4C4B4B;
+  --text-muted: #8a8a85;
+  --radius-card: 24px;
+  --radius-pill: 999px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+::selection {
+  background: rgba(139,115,71,0.25);
+  color: #3E4B3D;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-thumb { background: #c9c5b8; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+a { color: inherit; text-decoration: none; }
